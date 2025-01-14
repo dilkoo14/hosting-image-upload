@@ -17,6 +17,9 @@ gem "stimulus-rails"
 gem "bootstrap", "~> 5.2"
 gem "simple_form"
 gem "sassc-rails"
+# Gemfile
+  gem "dotenv-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
