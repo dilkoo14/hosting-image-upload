@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+config.active_storage.service = :cloudinary
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -102,4 +103,9 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+end
+# config/environments/development.rb
+Rails.application.configure do
+  # ... autres configurations ...
+  config.active_storage.service = :cloudinary
 end

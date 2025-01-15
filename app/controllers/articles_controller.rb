@@ -50,7 +50,11 @@ class ArticlesController < ApplicationController
     def set_article
       @article = Article.find(params[:id])
     end
-
+    # app/controllers/articles_controller.rb
+    # [...]
+    def article_params
+      params.require(:article).permit(:title, :body, :photo)
+    end
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :body)

@@ -6,10 +6,13 @@
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path article.photo.key, height: 300, crop: :fill %>')">
+      <h2><%= article.title %></h2>
+      <p><%= article.content %></p>
+      <p>
+        <%= link_to "Show this article", article %>
+      </p>
+    </div>
   <% end %>
 </div>
 
